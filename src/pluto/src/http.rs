@@ -11,7 +11,7 @@ use std::{collections::HashMap, str::FromStr};
 
 /// HeaderField is the type of the header of the request.
 #[derive(CandidType, Deserialize, Clone)]
-pub struct HeaderField(String, String);
+pub struct HeaderField(pub String, pub String);
 
 /// RawHttpRequest is the request type that is sent by the client.
 /// It is a raw version of HttpRequest. It is compatible with the Candid type.
